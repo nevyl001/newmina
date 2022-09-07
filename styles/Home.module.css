@@ -43,7 +43,7 @@
   z-index: 2;
   color: white;
   text-align: center;
-  padding-top: 25vh;
+  padding-top: 20vh;
   font-size: 20px;
 }
 .box_img:hover .overlay {
@@ -75,9 +75,25 @@
 .section_1 .box_left .text_left {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 30px;
 }
 .logo {
   margin-bottom: 40vh;
+}
+
+@media (max-width: 800px) {
+  .box {
+    display: block;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+  .box_img {
+    width: 100%;
+    height: 60vh;
+  }
 }
