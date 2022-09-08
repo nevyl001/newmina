@@ -38,6 +38,7 @@
   transition-duration: 0.2s;
 }
 .box_img .name {
+  letter-spacing: 3px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -83,6 +84,13 @@
   margin-bottom: 40vh;
 }
 
+.text_down {
+  display: none;
+}
+.contact_down {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .box {
     display: block;
@@ -95,6 +103,30 @@
   }
   .box_img {
     width: 100%;
+    height: 50vh;
+  }
+  .left .scroll_box {
+    padding-top: 20vh;
     height: 60vh;
+    overflow-y: hidden;
+    padding-bottom: 10vh;
+  }
+  .left .contact {
+    display: none;
+  }
+  .left .text_left {
+    display: none;
+  }
+  .text_down {
+    padding-top: 20px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+  }
+  .contact_down {
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    padding-bottom: 20px;
   }
 }

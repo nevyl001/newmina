@@ -54,36 +54,59 @@ export default function Home() {
                 <div
                   href="#"
                   className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img1.png)" }}
+                  style={{ backgroundImage: "url(/img/img_01.jpg)" }}
                 >
                   <div className={styles.overlay} />
-                  <div className={styles.name}>ASD ASD ASD</div>
+                  <div className={styles.name}>NIMA LOCAL HOUSE</div>
                 </div>
                 <div
                   href="#"
                   className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img2.png)" }}
+                  style={{ backgroundImage: "url(/img/img_02.jpg)" }}
                 >
                   <div className={styles.overlay} />
-                  <div className={styles.name}>ASD ASD ASD</div>
+                  <div className={styles.name}>NIMA URBAN SPA</div>
                 </div>
                 <div
                   href="#"
                   className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img3.png)" }}
+                  style={{ backgroundImage: "url(/img/img_03.jpg)" }}
                 >
                   <div className={styles.overlay} />
-                  <div className={styles.name}>ASD ASD ASD</div>
+                  <div className={styles.name}>NIMA LOCAL SHOP</div>
                 </div>
                 <div
                   href="#"
                   className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img4.png)" }}
+                  style={{ backgroundImage: "url(/img/img_04.jpg)" }}
                 >
                   <div className={styles.overlay} />
-                  <div className={styles.name}>ASD ASD ASD</div>
+                  <div className={styles.name}>NIMA EVENTS</div>
                 </div>
               </div>
+            </div>
+            <div className={styles.text_down}>
+              <p>PART OF NIMA GROUP</p>
+              <p>OMUN</p>
+              <p>Lava lab</p>
+            </div>
+            <div className={styles.contact_down}>
+              <div className={styles.text}>
+                <p>Sign Up For Exclusive Offers</p>
+              </div>
+              <form
+                className={styles.form}
+                action="/send-data-here"
+                method="post"
+              >
+                <input
+                  type="text"
+                  id="last"
+                  placeholder=" Email address"
+                  name="last"
+                />
+                <button type="submit">Send</button>
+              </form>
             </div>
           </div>
         </div>
