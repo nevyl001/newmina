@@ -60,6 +60,7 @@ export default function Home() {
                   <div className={styles.name}>ASD ASD ASD</div>
                 </div>
                 <div
+                  href="#"
                   className={styles.box_img}
                   style={{ backgroundImage: "url(/img/img2.png)" }}
                 >
@@ -67,6 +68,7 @@ export default function Home() {
                   <div className={styles.name}>ASD ASD ASD</div>
                 </div>
                 <div
+                  href="#"
                   className={styles.box_img}
                   style={{ backgroundImage: "url(/img/img3.png)" }}
                 >
@@ -74,6 +76,7 @@ export default function Home() {
                   <div className={styles.name}>ASD ASD ASD</div>
                 </div>
                 <div
+                  href="#"
                   className={styles.box_img}
                   style={{ backgroundImage: "url(/img/img4.png)" }}
                 >
