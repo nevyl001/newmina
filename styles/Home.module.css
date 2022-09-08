@@ -21,6 +21,7 @@
   font-size: 0;
 }
 .box_img {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   width: 50%;

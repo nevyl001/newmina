@@ -52,6 +52,7 @@ export default function Home() {
             <div className={styles.right}>
               <div className={styles.box_imgs}>
                 <div
+                  href="#"
                   className={styles.box_img}
                   style={{ backgroundImage: "url(/img/img1.png)" }}
                 >
