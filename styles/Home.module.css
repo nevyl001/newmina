@@ -48,6 +48,31 @@
   padding-top: 20vh;
   font-size: 20px;
 }
+.box_img .name_prox {
+  opacity: 0;
+  letter-spacing: 3px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  color: white;
+  text-align: center;
+  padding-top: 25vh;
+  font-size: 20px;
+}
+.box_img .name_prox:hover {
+  transition: 2s;
+  opacity: 1;
+  letter-spacing: 3px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  color: white;
+  text-align: center;
+  padding-top: 25vh;
+  font-size: 20px;
+}
 .box_img:hover .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   transition-duration: 0.2s;

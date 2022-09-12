@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -51,38 +53,43 @@ export default function Home() {
             </div>
             <div className={styles.right}>
               <div className={styles.box_imgs}>
-                <div
-                  href="#"
-                  className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img_01.jpg)" }}
-                >
-                  <div className={styles.overlay} />
-                  <div className={styles.name}>NIMA LOCAL HOUSE</div>
-                </div>
-                <div
-                  href="#"
-                  className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img_02.jpg)" }}
-                >
-                  <div className={styles.overlay} />
-                  <div className={styles.name}>NIMA URBAN SPA</div>
-                </div>
-                <div
-                  href="#"
-                  className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img_03.jpg)" }}
-                >
-                  <div className={styles.overlay} />
-                  <div className={styles.name}>NIMA LOCAL SHOP</div>
-                </div>
-                <div
-                  href="#"
-                  className={styles.box_img}
-                  style={{ backgroundImage: "url(/img/img_04.jpg)" }}
-                >
-                  <div className={styles.overlay} />
-                  <div className={styles.name}>NIMA EVENTS</div>
-                </div>
+                <Link href="https://hotelnima.com/">
+                  <div
+                    className={styles.box_img}
+                    style={{ backgroundImage: "url(/img/img_01.jpg)" }}
+                  >
+                    <div className={styles.overlay} />
+                    <div className={styles.name}>NIMA LOCAL HOUSE</div>
+                  </div>
+                </Link>
+                <Link href="/">
+                  <div
+                    className={styles.box_img}
+                    style={{ backgroundImage: "url(/img/img_02.jpg)" }}
+                  >
+                    <div className={styles.overlay} />
+                    <div className={styles.name}>NIMA URBAN SPA</div>
+                    <div className={styles.name_prox}>PROXIMAMENTE</div>
+                  </div>
+                </Link>
+                <Link href="https://nimalocalshop.com/blogs/nima-local-shop">
+                  <div
+                    className={styles.box_img}
+                    style={{ backgroundImage: "url(/img/img_03.jpg)" }}
+                  >
+                    <div className={styles.overlay} />
+                    <div className={styles.name}>NIMA LOCAL SHOP</div>
+                  </div>
+                </Link>
+                <Link href="https://nimaeventos.com/">
+                  <div
+                    className={styles.box_img}
+                    style={{ backgroundImage: "url(/img/img_04.jpg)" }}
+                  >
+                    <div className={styles.overlay} />
+                    <div className={styles.name}>NIMA EVENTS</div>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className={styles.text_down}>
