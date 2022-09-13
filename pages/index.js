@@ -62,16 +62,14 @@ export default function Home() {
                     <div className={styles.name}>NIMA LOCAL HOUSE</div>
                   </div>
                 </Link>
-                <Link href="/">
-                  <div
-                    className={styles.box_img}
-                    style={{ backgroundImage: "url(/img/img_02.jpg)" }}
-                  >
-                    <div className={styles.overlay} />
-                    <div className={styles.name}>NIMA URBAN SPA</div>
-                    <div className={styles.name_prox}>PROXIMAMENTE</div>
-                  </div>
-                </Link>
+                <div
+                  className={styles.box_img}
+                  style={{ backgroundImage: "url(/img/img_02.jpg)" }}
+                >
+                  <div className={styles.overlay} />
+                  <div className={styles.urban}>NIMA URBAN SPA</div>
+                  <div className={styles.name_prox}>PROXIMAMENTE</div>
+                </div>
                 <Link href="https://nimalocalshop.com/blogs/nima-local-shop">
                   <div
                     className={styles.box_img}
