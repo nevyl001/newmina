@@ -1,10 +1,32 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-
+import React, { useRef } from "react";
 import styles from "../styles/Home.module.css";
+import emailjs from "@emailjs/browser";
 
 export default function Home() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5atxenm",
+        "template_gdx8rzt",
+        form.current,
+        "PT9EId-6SyiTo9UTR"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -25,7 +47,6 @@ export default function Home() {
                     height={106}
                   />
                 </div>
-
                 <div className={styles.text_left}>
                   <p>PART OF NIMA GROUP</p>
                   <p>OMUN</p>
@@ -35,18 +56,16 @@ export default function Home() {
                   <div className={styles.text}>
                     <p>Sign Up For Exclusive Offers</p>
                   </div>
-                  <form
-                    className={styles.form}
-                    action="/send-data-here"
-                    method="post"
-                  >
+                  <form ref={form} onSubmit={sendEmail} className={styles.form}>
                     <input
                       type="text"
-                      id="last"
+                      id="email"
                       placeholder=" Email address"
-                      name="last"
+                      name="email"
                     />
-                    <button type="submit">Send</button>
+                    <button type="submit" value="Send">
+                      Send
+                    </button>
                   </form>
                 </div>
               </div>
