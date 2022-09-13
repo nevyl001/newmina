@@ -68,7 +68,7 @@ export default function Home() {
                 >
                   <div className={styles.overlay} />
                   <div className={styles.urban}>NIMA URBAN SPA</div>
-                  <div className={styles.name_prox}>PROXIMAMENTE</div>
+                  <div className={styles.name_prox}>PRÓXIMAMENTE</div>
                 </div>
                 <Link href="https://nimalocalshop.com/blogs/nima-local-shop">
                   <div
