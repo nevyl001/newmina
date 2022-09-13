@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "../styles/Home.module.css";
 import emailjs from "@emailjs/browser";
 
 export default function Home() {
+  const [isMailSent, setIsMailSent] = useState(false);
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,6 +22,7 @@ export default function Home() {
       .then(
         (result) => {
           console.log(result.text);
+          setIsMailSent(true);
         },
         (error) => {
           console.log(error.text);
@@ -52,22 +55,36 @@ export default function Home() {
                   <p>OMUN</p>
                   <p>Lava lab</p>
                 </div>
-                <div className={styles.contact}>
-                  <div className={styles.text}>
-                    <p>Sign Up For Exclusive Offers</p>
+
+                {isMailSent ? (
+                  <div id="popup1" class="overlay">
+                    <div class="popup">
+                      <h2>Email Enviado </h2>
+                      <div class="content">Gracias por suscribirte...</div>
+                    </div>
                   </div>
-                  <form ref={form} onSubmit={sendEmail} className={styles.form}>
-                    <input
-                      type="text"
-                      id="email"
-                      placeholder=" Email address"
-                      name="email"
-                    />
-                    <button type="submit" value="Send">
-                      Send
-                    </button>
-                  </form>
-                </div>
+                ) : (
+                  <div className={styles.contact}>
+                    <div className={styles.text}>
+                      <p>Sign Up For Exclusive Offers</p>
+                    </div>
+                    <form
+                      ref={form}
+                      onSubmit={sendEmail}
+                      className={styles.form}
+                    >
+                      <input
+                        type="text"
+                        id="email"
+                        placeholder=" Email address"
+                        name="email"
+                      />
+                      <button type="submit" value="Send">
+                        Send
+                      </button>
+                    </form>
+                  </div>
+                )}
               </div>
             </div>
             <div className={styles.right}>
