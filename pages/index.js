@@ -35,7 +35,7 @@ export default function Home() {
       <Head>
         <title>Nima</title>
         <meta name="description" content="PART OF NIMA GROUP" />
-        <link rel="icon" href="/" />
+        <link rel="icon" href="/img/logo.png" />
       </Head>
       <main className={styles.main}>
         <div className={styles.test}>
