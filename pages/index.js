@@ -55,13 +55,10 @@ export default function Home() {
                   <p>OMUN</p>
                   <p>Lava lab</p>
                 </div>
-
                 {isMailSent ? (
-                  <div id="popup1" class="overlay">
-                    <div class="popup">
-                      <h2>Email Enviado </h2>
-                      <div class="content">Gracias por suscribirte...</div>
-                    </div>
+                  <div className={styles.popup}>
+                    <h2>Email Enviado </h2>
+                    <p>Gracias por suscribirte...</p>
                   </div>
                 ) : (
                   <div className={styles.contact}>
@@ -131,23 +128,31 @@ export default function Home() {
               <p>OMUN</p>
               <p>Lava lab</p>
             </div>
+
             <div className={styles.contact_down}>
-              <div className={styles.text}>
-                <p>Sign Up For Exclusive Offers</p>
-              </div>
-              <form
-                className={styles.form}
-                action="/send-data-here"
-                method="post"
-              >
-                <input
-                  type="text"
-                  id="last"
-                  placeholder=" Email address"
-                  name="last"
-                />
-                <button type="submit">Send</button>
-              </form>
+              {isMailSent ? (
+                <div className={styles.popup}>
+                  <h2>Email Enviado </h2>
+                  <p>Gracias por suscribirte...</p>
+                </div>
+              ) : (
+                <div className={styles.contact}>
+                  <div className={styles.text}>
+                    <p>Sign Up For Exclusive Offers</p>
+                  </div>
+                  <form ref={form} onSubmit={sendEmail} className={styles.form}>
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder=" Email address"
+                      name="email"
+                    />
+                    <button type="submit" value="Send">
+                      Send
+                    </button>
+                  </form>
+                </div>
+              )}
             </div>
           </div>
         </div>
